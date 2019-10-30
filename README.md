@@ -1,11 +1,19 @@
 # Scraper pracuj.pl
+
+Program umożliwiający szybkie przeszukanie wszystkich ofert w serwisie `pracuj.pl` w danym mieście za pomocą wyszukiwania .
+
+
 ## Użytkowanie
 1. Należy uruchomić `main.go` (albo skompilowaną wersję).
-1. Stworzyć zapytanie przez przeglądarkę na `localhost:8080/pracuj` podając parametry takie jak:
-    * `city` (jeden argument) -- miasto w którym szukamy ofert,
-    * `keyword` (wiele argumentów) -- słowa, których szukamy w opisach ofert.
+1. Wpisać nazwę miasta oraz słowa klucze.
+1. Uruchomić wyszukiwanie (**uwaga:** wyszukiwanie może zająć do kilku minut - w zależności od prędkości łącza internetowego).
+1. Po zakończeniu pracy z programem zamknąć jego okno (konsolę).
 
-## Struktura projektu
+**Uwaga:** Wyszukiwane słowa kluczowe są wyszukiwane jako podciągi znaków, ponadto wielkość liter nie ma znaczenia. Na przykład *inżynier* zostanie znaleziony w słowie w ofercie zawierającej słowo *Inżynierska*.
+
+
+## Informacje techniczne
+### Struktura projektu
 * **scrapers**
     * `Collector.go` -- funkcje do inicjalizacji kolektora z modułu `colly`.
     * `ScraperPracuj.go` -- funkcje dodające obsługę poszczególnych elementów HTML do kolektora.
@@ -17,14 +25,15 @@
 * `main.go` -- uruchomienie serwera.
 * `README.md` -- ten plik.
 
-## Kompilacja
+### Kompilacja
 `go build -o ScraperPracuj.exe -i -ldflags "-s -w"`
 
-## ToDo
+### ToDo
+* [x] Zakutalizować `README.md`.
 * [ ] Dodać odpowiednią licencję:
     * [ ] dodać do repozytorium,
     * [ ] dodać do pliku (wypisanie przed startem).
-* [ ] Wstawiać na GitHub nowe wydania (ang. *release*).
+* [ ] Wstawiać na GitHub nowe wydania (ang. *releas e*).
 * [ ] Dodać sprawdzenie, czy nie wyszła nowa wersja -- jeśli tak, to poinformować użytkownika:
     * [ ] Informacja na stronie.
     * [ ] Informacja na konsoli (sprawdzanie -> wynik: "obecna wersja jest najnowsza" / "wyszła nowa wersja").
@@ -38,4 +47,4 @@
     * [ ] funkcjonalność w kodzie.
 * [ ] Zbadać dlaczego niektóre błędy wypisują się w wielu linijkach.
 * [ ] Zmienić kod HTML zamieszczony w kodzie na wzorce, które są pakowane za pomocą jakichś pakietów.
-* [ ] Zakutalizować `README.md`.
+
