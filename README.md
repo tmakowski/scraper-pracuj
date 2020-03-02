@@ -1,5 +1,7 @@
 # Scraper pracuj.pl
 
+This is a software written in Go language which allows quick searching for given keywords in all offers found at Polish job board `pracuj.pl`. The rest of this README is written in Polish.
+
 Program umożliwiający szybkie przeszukanie wszystkich ofert w serwisie `pracuj.pl` w danym mieście za pomocą wyszukiwania .
 
 
