@@ -1,6 +1,6 @@
 ### TODO
 * [ ] Dodać odpowiednią licencję:
-    * [ ] dodać do repozytorium,
+    * [x] dodać do repozytorium,
     * [ ] dodać do pliku (wypisanie przed startem).
 * [ ] Wstawiać na GitHub nowe wydania (ang. *releas e*).
 * [ ] Dodać sprawdzenie, czy nie wyszła nowa wersja -- jeśli tak, to poinformować użytkownika:
